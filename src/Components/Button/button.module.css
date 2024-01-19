@@ -1,0 +1,22 @@
+.butt{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 28.80px;
+    word-wrap: break-word;
+    cursor: pointer;
+    
+}
+.background{
+    padding: 6px 14px;
+    background-color: #476882;
+    color: #fff;
+    border-radius: 4px ;
+    outline: none;
+    border: none;
+}
+.none{
+    border: none;
+    background-color: white;
+    color:  #476882;
+}

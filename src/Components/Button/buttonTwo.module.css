@@ -1,0 +1,22 @@
+.button{
+    display: flex;
+    align-items: center;
+    gap:3px;
+    border: 1px solid #5A819D;
+    background-color: #fff;
+    padding: 2px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button p{
+    color: #5A819D;
+    font-size: 14px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    line-height: 20px;
+    word-wrap: break-word;   
+}
+.button img{
+    width: 20px;
+    height: 15px;
+}

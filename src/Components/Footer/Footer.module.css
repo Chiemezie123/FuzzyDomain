@@ -1,0 +1,64 @@
+.mainContainer{
+    background-color: #476882;
+}
+.FirstContainer{
+    padding: 30px 0px;
+    margin: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo h2{
+    color: white;
+    font-size: 30px;
+    font-family: Space Grotesk;
+    font-weight: 700;
+    line-height: 43.20px;
+    word-wrap: break-word
+}
+.secondLogo{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.reactIcons{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #fff;
+}
+.text p{
+    color: white;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word
+}
+@media (max-width: 1000px) {
+    
+    .FirstContainer{
+        padding: 30px 0px;
+        margin: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .secondLogo{
+        margin-top: 30px;
+        display: flex;
+        gap: 10px;
+       flex-direction: column;
+       align-items: flex-start;
+    }
+
+    .logo h2{
+        color: white;
+        font-size: 30px;
+        font-family: Space Grotesk;
+        font-weight: 900;
+        line-height: 40px;
+        word-wrap: break-word
+    }
+}
