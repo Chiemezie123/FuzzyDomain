@@ -17,22 +17,24 @@ function Search({manRef}) {
   const startIndex = currentPage * rowsPerPage;
   const endIndex = startIndex + rowsPerPage;
   
-  const displayData = Data.map((data) => ({
+  const displayData =  Data.sort((a, b) =>
+  a.domain.localeCompare(b.domain, undefined, { sensitivity: 'base' })
+).map((data) => ({
     ...data,
     domain: data.domain.charAt(0).toUpperCase() + data.domain.slice(1),
     location: data.location.charAt(0).toUpperCase() + data.location.slice(1),
   }));
-  
+  console.log(displayData,":displayoooohhh")
   const paginatedData = displayData.slice(startIndex, endIndex);
   
   const columnss = [
     {
       Header: "S/N",
-      accessor: "number",
-      Cell: ({ cell: { row } }) => {
+      accessor: (row, index) => index + 1,
+      Cell: ({ cell: { value } }) => {
         return (
           <div>
-            <span className={search.number}> {row.original.number}</span>
+            <span className={search.number}>{value}</span>
           </div>
         );
       },
@@ -85,11 +87,11 @@ function Search({manRef}) {
   const smallColumns =[
     {
       Header: "S/N",
-      accessor: "number",
-      Cell: ({ cell: { row } }) => {
+      accessor: (row, index) => index + 1,
+      Cell: ({ cell: { value } }) => {
         return (
           <div>
-            <span className={search.number}> {row.original.number}</span>
+            <span className={search.number}>{value}</span>
           </div>
         );
       },
