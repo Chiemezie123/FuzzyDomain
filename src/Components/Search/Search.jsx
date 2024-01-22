@@ -12,7 +12,7 @@ import useWindowWidth from "../Hooks/usewindow";
 function Search({manRef}) {
   const [currentPage, setCurrentPage] = useState(0);
   const {windowWidth}= useWindowWidth();
-
+  const [filterValue, setFilterValue] = useState("");
   const rowsPerPage = 10;
   const startIndex = currentPage * rowsPerPage;
   const endIndex = startIndex + rowsPerPage;
@@ -25,8 +25,10 @@ function Search({manRef}) {
     location: data.location.charAt(0).toUpperCase() + data.location.slice(1),
   }));
   console.log(displayData,":displayoooohhh")
-  const paginatedData = displayData.slice(startIndex, endIndex);
-  
+  // const paginatedData = displayData.slice(startIndex, endIndex);
+  const paginatedData = displayData.filter((item)=>(item.domain.toLowerCase().includes(filterValue.toLocaleLowerCase())));
+  const mainData = paginatedData.slice(startIndex,endIndex);
+
   const columnss = [
     {
       Header: "S/N",
@@ -118,7 +120,7 @@ function Search({manRef}) {
   ]
 
   const columns = useMemo(() => (window.innerWidth <= 600 ? smallColumns : columnss), [windowWidth]);
-  const data = useMemo(() => paginatedData, [currentPage]);
+  const data = useMemo(() => mainData, [currentPage, filterValue]);
  
 
   const totalPages = Math.ceil(displayData.length / rowsPerPage);
@@ -163,8 +165,8 @@ function Search({manRef}) {
               <img src={searchLogo} alt="search-logo" />
               <input
                 type="text"
-                value={state.filters[0]?.value || ""}
-                onChange={(e) => setFilter("domain", e.target.value)}
+                value={filterValue}
+                onChange={(e) => setFilterValue( e.target.value)}
                 placeholder="Filter by location"
               />
             </div>
@@ -190,7 +192,7 @@ function Search({manRef}) {
                 </p>
             </div>
             <div className={search.secondFooter}>
-              <ButtonTwo text="previous" onClick={handlePrevPage }/>
+              <ButtonTwo text="previous" onClick={handlePrevPage } />
               <ButtonTwo text="next" onClick={handleNextPage }/>
             </div>
           </div>
