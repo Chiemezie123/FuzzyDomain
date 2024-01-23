@@ -13,6 +13,7 @@ function Search({manRef}) {
   const [currentPage, setCurrentPage] = useState(0);
   const {windowWidth}= useWindowWidth();
   const [filterValue, setFilterValue] = useState("");
+  
   const rowsPerPage = 10;
   const startIndex = currentPage * rowsPerPage;
   const endIndex = startIndex + rowsPerPage;
@@ -24,7 +25,7 @@ function Search({manRef}) {
     domain: data.domain.charAt(0).toUpperCase() + data.domain.slice(1),
     location: data.location.charAt(0).toUpperCase() + data.location.slice(1),
   }));
-  console.log(displayData,":displayoooohhh")
+  
   // const paginatedData = displayData.slice(startIndex, endIndex);
   const paginatedData = displayData.filter((item)=>(item.domain.toLowerCase().includes(filterValue.toLocaleLowerCase())));
   const mainData = paginatedData.slice(startIndex,endIndex);
@@ -128,7 +129,6 @@ function Search({manRef}) {
 
   const handleNextPage = () => {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages - 1));
-   
   };
 
 
@@ -192,8 +192,8 @@ function Search({manRef}) {
                 </p>
             </div>
             <div className={search.secondFooter}>
-              <ButtonTwo text="previous" onClick={handlePrevPage } />
-              <ButtonTwo text="next" onClick={handleNextPage }/>
+              <ButtonTwo text="previous" onClick={handlePrevPage}  />
+              <ButtonTwo text="next" onClick={handleNextPage }  />
             </div>
           </div>
         </div>
