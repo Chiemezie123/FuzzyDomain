@@ -11,4 +11,4 @@ This is a simple landing page built with React and Vite. It showcases a list of 
 Live Demo
 You can access the live version of this landing page here.
 
-www.fuzzydomain.com
+[here](https://fuzzy-domain.vercel.app/)
