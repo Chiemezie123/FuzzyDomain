@@ -16,6 +16,7 @@ function Header({moveToSupport,manRef}) {
           <div className={Head.logo}>
             <img src={headerLogo} alt="header-logo" />
           </div>
+          {/* testing to see of this codebase still works */}
           <div className={Head.Button}>
             <Button text="Featured names" background={false} link={()=>{moveToSupport(manRef)}} />
             <Button text="Get in touch"  background={true} link={handleClick}/>
