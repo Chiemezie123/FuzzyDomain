@@ -23,7 +23,7 @@ function Footer() {
                 </div>
                 <div className={Foooter.text}>
                     <p>
-                    © 2024 fuzzy domains. All rights reserved.
+                    © 2025 domainsunit. All rights reserved.
                     </p>
                 </div>
             </div>
