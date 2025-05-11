@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "./Header.module.css";
 import Button from "../Button/Button";
-import headerLogo from "/fuzzylogo.png";
+import headerLogo from "/domainsunit.png";
 
 function Header({moveToSupport,manRef}) {
   const email = 'tony@fuzzydomain.com';

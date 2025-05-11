@@ -16,6 +16,12 @@
     line-height: 43.20px;
     word-wrap: break-word
 }
+
+.logo img{
+    background: transparent;
+    width: 100px;
+    height: 100px;
+}
 .secondLogo{
     display: flex;
     gap: 20px;

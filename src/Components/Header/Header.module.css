@@ -16,11 +16,14 @@
     /* border: 1px solid forestgreen; */
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
+    padding-top:10px ;
+  
 }
 .logo img{
-    height: 60px;
-    width: 140px;
+    height: 120px;
+    width: 240px;
+   
 }
 .Button{
     display: flex;

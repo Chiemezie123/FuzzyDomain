@@ -13,7 +13,7 @@ function Footer() {
     <div className={Foooter.mainContainer}>
       <div className={Foooter.FirstContainer}>
             <div className={Foooter.logo}>
-                <h2>Fuzzy<br/>domains.</h2>
+               <img src="/gem.png" alt="gem.png" />
             </div>
             <div className={Foooter.secondLogo}>
                 <div className={Foooter.reactIcons}>
